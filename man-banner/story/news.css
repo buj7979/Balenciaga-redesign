@@ -1,0 +1,258 @@
+a {
+    color: inherit;
+    text-decoration: none;
+}
+
+body,
+ul,
+li {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+.con {
+    max-width: 1600px;
+    margin: 0 auto;
+}
+
+.img-box > img {
+    width: 20%;
+    display: block;
+    margin: 50px auto;
+    cursor: pointer;
+}
+.row::after {
+    content: "";
+    display: block;
+    clear: both;
+}
+
+.cell {
+    float: left;
+    box-sizing: border-box;
+}
+
+.main-menu-bar {
+    background-color: white;
+    position: absolute;
+    top: 20%;
+    left: 50%;
+    width: 100%;
+    transform: translateX(-50%);
+}
+
+.main-menu-bar > .menu-1 > ul > li {
+    width: 13%;
+    position: relative;
+    left: 28%;
+    transform: translateX(-28%);
+}
+
+.main-menu-bar > .menu-1 ul > li a {
+    display: block;
+    text-align: center;
+}
+
+.main-menu-bar .menu-1 ul ul {
+    height: 0;
+    overflow-y: hidden;
+    transition: all .5s;
+    transform: translateX(-40px);
+    opacity: 0;
+}
+
+.main-menu-bar .menu-1 > ul:hover ul {
+    height: 150px;
+    transform: translateX(0);
+    opacity: 1;
+}
+
+.main-menu-bar > .menu-1 > ul > li > a {
+    font-size: 1.15rem;
+    margin-bottom: 15px;
+}
+
+.main-menu-bar > .menu-1 > ul > li > ul > li > a {
+    margin-bottom: 10px
+}
+
+.main-menu-bar > .menu-1 ul > li:hover > a {
+    text-decoration: underline;
+}
+.icon > ul > li {
+    float:right;
+    padding:10px;
+}
+.icon > ul::after {
+    content:"";
+    display:block;
+    clear:both;
+}
+.main-menu-bar > .menu-1 > ul > li:nth-child(3) {
+    padding-right:50px;
+}
+.main-menu-bar > .menu-1 > ul > li:nth-child(2) {
+    padding-right:40px;
+}
+
+.con {
+    max-width:1360px;
+}
+
+
+
+/* list-1 */
+
+.img-box2 > img {
+    width:100%;
+    display:block;
+}
+
+.list-1 .cell >.img-box2{
+    position:relative;
+    cursor:pointer;
+    user-select:none;
+    top:200px;
+   
+}
+
+.list-1 .cell>.img-box2::before{
+    content:"";
+    position:absolute;
+    top:0;
+    left:0;
+    right:0;
+    bottom:0;
+    background-color:rgba(0,0,0,0.0);
+}
+
+.list-1 .cell:hover >.img-box2::before{
+     background-color:rgba(255,255,255,0.5);
+}
+
+
+.list-1 .cell {
+    width:25%;
+    
+}
+
+.list-1 .cell:nth-child(1) {
+    width:50%;
+}
+
+.list-1 .cell:hover:nth-child(1)::after{
+    content:"[NEWS] 발렌시아가의시적인 테러리즘";
+    position:absolute;
+    top:90%;;
+    left:22%;
+    font-size:20px;
+    text-decoration:underline;
+    font-weight:bold;
+   
+    
+}
+
+.list-1 .cell:nth-child(2) {
+    width:50%;
+}
+
+.list-1 .cell:hover:nth-child(2)::after{
+    content:"[NEWS] 발렌시아가가 선보인, 화제의 LED 프레임 선글라스";
+    position:absolute;
+    top:80%;
+    left:55%;
+    font-size:20px;
+    text-decoration:underline;
+    font-weight:bold;
+   
+    
+}
+
+.list-1 .cell:nth-child(3) {
+    width:50%;
+    margin-bottom:165px;
+}
+
+.list-1 .cell:hover:nth-child(3)::after{
+    content:"[NEWS]발렌시아가 스피드 트레이너 신상 5종";
+    position:absolute;
+    top:130%;
+    left:57%;
+    font-size:20px;
+    text-decoration:underline;
+    font-weight:bold;
+   
+    
+}
+
+.list-1 .cell:nth-child(4) {
+    width:50%;
+    margin-top:-30px;
+}
+
+.list-1 .cell:hover:nth-child(4)::after{
+    content:"[NEWS]LED 라이트 장착한 트랙 트레이너 출시";
+    position:absolute;
+    top:165%;
+    left:20%;
+    font-size:20px;
+    text-decoration:underline;
+    font-weight:bold;
+   
+    
+}
+
+.list-1 .cell:nth-child(5) {
+    width:25%;
+    margin-top:-38px;
+    margin-bottom:15px;
+}
+
+.list-1 .cell:hover:nth-child(5)::after{
+    content:"[NEWS] 2020룩북발매";
+    position:absolute;
+    top:165%;
+    left:53%;
+    font-size:20px;
+    text-decoration:underline;
+    font-weight:bold;
+   
+    
+}
+
+.list-1 .cell:nth-child(6) {
+    width:25%;
+    margin-top:-38px;
+    margin-bottom:15px;
+  
+}
+
+.list-1 .cell:hover:nth-child(6)::after{
+    content:"[NEWS] 2020콜렉션";
+    position:absolute;
+    top:165%;
+    left:72%;
+    font-size:20px;
+    text-decoration:underline;
+    font-weight:bold;
+   
+    
+}
+
+
+.under-bar{
+    position:relative;
+    margin-top:140px;
+}
+.under-bar::after{
+    content:"";
+    position:absolute;
+    top:90px;
+    left:0;
+    right:0;
+    bottom:30px;
+    background-color:rgba(0,0,0,0);
+    cursor:pointer;
+}
+    

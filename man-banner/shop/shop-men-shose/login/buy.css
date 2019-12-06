@@ -1,0 +1,166 @@
+a {
+    color: inherit;
+    text-decoration: none;
+}
+
+body,
+ul,
+li {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+.con {
+    max-width: 1600px;
+    margin: 0 auto;
+}
+/*상단아이콘*/
+.icon > ul > li {
+    float:right;
+    padding:10px;
+}
+.icon > ul::after {
+    content:"";
+    display:block;
+    clear:both;
+}
+/*상단 메인로고*/
+.top-menu-img-box > img {
+    width: 20%;
+    display: block;
+    margin: 50px auto;
+}
+/*상단 메인메뉴바 작업*/
+.top-menu-row::after {
+    content: "";
+    display: block;
+    clear: both;
+}
+
+.top-menu-cell {
+    float: left;
+    box-sizing: border-box;
+}
+
+.main-menu-bar {
+    background-color: white;
+    position: absolute;
+    top: 20%;
+    left: 50%;
+    width: 100%;
+    transform: translateX(-50%);
+    z-index:10;
+}
+
+.main-menu-bar > .menu-1 > ul > li {
+    width: 13%;
+    position: relative;
+    left: 28%;
+    transform: translateX(-28%);
+}
+
+.main-menu-bar > .menu-1 ul > li a {
+    display: block;
+    text-align: center;
+}
+
+.main-menu-bar .menu-1 ul ul {
+    height: 0;
+    overflow-y: hidden;
+    transition: all .5s;
+    transform: translateX(-40px);
+    opacity: 0;
+}
+
+.main-menu-bar .menu-1 > ul:hover ul {
+    height: 150px;
+    transform: translateX(0);
+    opacity: 1;
+}
+
+.main-menu-bar > .menu-1 > ul > li > a {
+    font-size: 1.15rem;
+    margin-bottom: 15px;
+}
+
+.main-menu-bar > .menu-1 > ul > li > ul > li > a {
+    margin-bottom: 10px
+}
+
+.main-menu-bar > .menu-1 ul > li:hover > a {
+    text-decoration: underline;
+}
+
+.main-menu-bar > .menu-1 > ul > li:nth-child(3) {
+    padding-right:50px;
+}
+.main-menu-bar > .menu-1 > ul > li:nth-child(2) {
+    padding-right:40px;
+}
+.login {
+    margin-top:250px;
+    left:24%;
+    border:1px solid;
+    position: relative;
+    width:1000px;
+    height: 500px;
+}
+.login > input {
+    position: absolute;
+    width:500px;
+    height: 30px;
+    left:25%;
+    top:20%;
+}
+.login > #pwd {
+    margin-top:50px;
+}
+.login > .tete {
+    position: absolute;
+    background-color:ghostwhite;
+    width:300px;
+    height: 50px;
+    font-size:2rem;
+    text-align: center;
+    left:35%;
+    margin-top:20px;
+}
+.login > .remember {
+    position: absolute;
+    left:24.5%;
+    top:39%;
+}
+.login > .btn {
+    cursor:pointer;
+    font-size:2.2rem;
+    background-color:#333333;
+    width:400px;
+    color: white;
+    text-align: center;
+    top:60%;
+    left:30%;
+    position: absolute;
+}
+.login > .btn > .logbtn {
+    border:1px solid white;
+    border-bottom:0.5px solid white;
+    padding:5px;
+}
+.login > .btn > .gaip {
+    border:1px solid white;
+    border-top:0.5px solid white;
+    padding:5px;
+}
+.under-bar {
+    position: absolute;
+    top:100%;
+    background-color: #100e0e;
+    width:100%;
+}
+.under-bar > img {
+    position: relative;
+    width:70%;
+    left:50%;
+    transform: translateX(-50%);
+}

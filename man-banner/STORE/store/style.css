@@ -1,0 +1,292 @@
+body, ul, li, h1, h2, h3, h4, h5, h6 {
+    margin:0;
+    padding:0;
+    list-style:none;
+}
+
+a {
+    color:inherit;
+    text-decoration:inherit;
+}
+.con {
+    margin: 0 auto;
+}
+.row::after {
+    content:"";
+    display:block;
+    clear:both;
+}
+
+.cell {
+    float:left;
+    box-sizing:border-box;
+}
+
+.cell.cell-1-5 {
+    width:20%;
+}
+
+.cell.cell-2-5 {
+    width:40%;
+}
+
+.cell.cell-3-5 {
+    width:60%;
+}
+
+.img-box > img {
+    display:block;
+    width:100%;
+    cursor: pointer;
+}
+.con {
+    width:1366px;
+}
+section {
+    margin-top:200px;
+}
+.min-con-width {
+    min-width:1366px;
+}
+.hover-btns {
+    position:relative;
+}
+.hover-btns::before {
+    display:none;
+    content:"";
+    position:absolute;
+    top:0;
+    left:0;
+    right:0;
+    bottom:0;
+    background-color:rgba(0,0,0,0);
+}
+.hover-btns:hover::before {
+    display:block;
+}
+.hover-btns .cart-btn, .like-btn {
+    display:none;
+    position:absolute;
+    top:50%;
+    left:15%;
+    padding:30px;
+    background-color:#F8D513;
+    transform:translateY(-50%);
+    border-radius:50%;
+    cursor:pointer;
+}
+.hover-btns .like-btn {
+    left:auto;
+    right:15%;
+}
+.hover-btns .cart-btn::before, .like-btn::before {
+    position:absolute;
+    content:"\f217";
+    color:white;
+    font-family:"Font Awesome 5 Free";
+    font-weight:900;
+    font-size:1.5rem;
+    top:50%;
+    left:50%;
+    transform:translateX(-50%) translateY(-50%);
+}
+.like-btn::before {
+    content:"\f004";
+    font-weight:400;
+    font-size:1.8rem;
+    top:53%;
+}
+.hover-btns:hover .cart-btn, .hover-btns:hover .like-btn {
+    display:block;
+}
+.box3 {
+    background-color:#fff;
+    padding-top:50px;
+    padding-bottom:50px;
+}
+.box3 .title img {
+    margin: 0 auto;
+}
+.box3 .list-1 {
+    margin-top:30px;
+}
+.box3 .list-1 > .row::after {
+  margin:0 auto;
+}
+.box3 .list-1 > .row > .cell {
+   padding:0;
+}
+.box3 .list-1 > .row > .cell > .img-box {
+    height:500px;
+    background-size:cover;
+}
+.box3 .list-1 > .row > .cell:nth-child(1) {
+    width:1366px;
+    height:500px;
+}
+.box3 .list-1 > .row > .cell:nth-child(2) {
+    width:683px;
+    height:100%;
+    left:0;
+    margin-top:20px;
+}
+.box3 .list-1 > .row > .cell:nth-child(3) {
+      width:683px;
+      height:100%;
+      margin-top:20px;
+      left:auto;
+      right:0;
+}
+.bottom {
+    background-color:#fff;
+    color:white;
+    width:1366px;
+}
+
+.bottom .menus::after {
+    content:"";
+    display:block;
+    clear:both;
+}
+
+.bottom .menus > .menu {
+    float:left;
+    margin-right:7.5%;
+    position:relative;
+    padding:70px;  
+}
+
+.bottom .menus > .menu::after {
+    content:"";
+    position:absolute;
+    top:70px;
+    right:-50px;
+    width:1px;
+    height:150px;
+    background-color:#eee;
+}
+
+.bottom .menus > .menu > ul > li {
+    float:left;
+    margin-right:20px;
+}
+
+.bottom .menus > .menu > ul::after {
+    content:"";
+    display:block;
+    clear:both;
+}
+
+
+.bottom .menus > .menu > ul > li > a {
+    color:#000;
+    font-size:25px;    
+}
+
+.bottom .menus > .menu ul ul > li > a, .bottom .menus > .menu ul ul > li > .text {
+    color:#000;
+    font-size:15px;
+    left:10px;
+}
+.bottom .menus > .menu-1> ul > li> ul > li:first-child > a{
+    font-size:20px; 
+}
+.bottom .menus > .menu:last-child::after {
+    display:none;
+}
+.under-bar{
+    position:relative;
+}
+.under-bar::after{
+    content:"";
+    position:absolute;
+    top:90px;
+    left:0;
+    right:0;
+    bottom:30px;
+    background-color:rgba(0,0,0,0);
+    cursor:pointer;
+}
+.icon > ul > li {
+    float:right;
+    padding:10px;
+}
+.icon > ul::after {
+    content:"";
+    display:block;
+    clear:both;
+}
+/*상단 메인로고*/
+.top-menu-img-box > img {
+    width: 20%;
+    display: block;
+    margin: 50px auto;
+    cursor: pointer;
+}
+/*상단 메인메뉴바 작업*/
+.top-menu-row::after {
+    content: "";
+    display: block;
+    clear: both;
+}
+
+.top-menu-cell {
+    float: left;
+    box-sizing: border-box;
+}
+
+.main-menu-bar {
+    background-color: white;
+    position: absolute;
+    top: 20%;
+    left: 50%;
+    width: 100%;
+    transform: translateX(-50%);
+    z-index:10;
+}
+
+.main-menu-bar > .menu-1 > ul > li {
+    width: 13%;
+    position: relative;
+    left: 28%;
+    transform: translateX(-28%);
+}
+
+.main-menu-bar > .menu-1 ul > li a {
+    display: block;
+    text-align: center;
+}
+
+.main-menu-bar .menu-1 ul ul {
+    height: 0;
+    overflow-y: hidden;
+    transition: all .5s;
+    transform: translateX(-40px);
+    opacity: 0;
+}
+
+.main-menu-bar .menu-1 > ul:hover ul {
+    height: 150px;
+    transform: translateX(0);
+    opacity: 1;
+}
+
+.main-menu-bar > .menu-1 > ul > li > a {
+    font-size: 1.15rem;
+    margin-bottom: 15px;
+}
+
+.main-menu-bar > .menu-1 > ul > li > ul > li > a {
+    margin-bottom: 10px
+}
+
+.main-menu-bar > .menu-1 ul > li:hover > a {
+    text-decoration: underline;
+}
+
+.main-menu-bar > .menu-1 > ul > li:nth-child(3) {
+    padding-right:50px;
+}
+.main-menu-bar > .menu-1 > ul > li:nth-child(2) {
+    padding-right:40px;
+}

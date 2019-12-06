@@ -1,0 +1,438 @@
+a {
+    color: inherit;
+    text-decoration: none;
+}
+
+body,
+ul,
+li {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+/*노말라이즈*/
+.con {
+    max-width: 1360px;
+    margin: 0 auto;
+}
+
+/*패널속성*/
+.panel {
+    height: 800px;
+    position: relative;
+}
+
+/*파기네이션*/
+.pagination {
+    position: fixed;
+    right: 20px;
+    top: 50%;
+    transform: translateY(-50%);
+    z-index: 10;
+}
+
+.pagination a {
+    display: block;
+    color: black;
+    position: relative;
+    padding: 20px;
+}
+
+.pagination a.active:after {
+    box-shadow: inset 0 0 0 5px;
+}
+
+.pagination a .hover-text {
+    position: absolute;
+    right: 20px;
+    top: 50%;
+    transform: translateY(-50%);
+    opacity: 0;
+    transition: opacity 0.5s ease;
+    padding-right: 15px;
+    white-space: nowrap;
+}
+
+.pagination a:hover .hover-text {
+    opacity: 1;
+}
+
+.pagination a:after {
+    content: "";
+    transition: box-shadow 0.5s ease;
+    width: 10px;
+    height: 10px;
+    display: block;
+    border: 1px solid;
+    border-radius: 50%;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translateX(-50%) translateY(-50%);
+}
+
+.top-bar {
+    height: 100px;
+}
+
+.img-box {
+    position: absolute;
+    top: 53%;
+    transform: translatey(-53%);
+}
+
+.img-box > a {
+    position: absolute;
+    top: 50%;
+    transform: translatey(-50%);
+}
+
+/*메인 로고*/
+.top-menu-img-box > img {
+    width: 20%;
+    display: block;
+    margin: 50px auto;
+    cursor: pointer;
+}
+
+/*상단바작업*/
+.top-menu-row::after {
+    content: "";
+    display: block;
+    clear: both;
+}
+
+.top-menu-cell {
+    float: left;
+    box-sizing: border-box;
+}
+
+.main-menu-bar {
+    background-color: white;
+    position: absolute;
+    left: 50%;
+    width: 100%;
+    transform: translateX(-50%);
+    z-index: 10;
+}
+
+.main-menu-bar > .menu-1 > ul > li {
+    width: 13%;
+    position: relative;
+    left: 28%;
+    transform: translateX(-28%);
+}
+
+.main-menu-bar > .menu-1 ul > li a {
+    display: block;
+    text-align: center;
+}
+
+.main-menu-bar .menu-1 ul ul {
+    height: 0;
+    overflow-y: hidden;
+    transition: all .5s;
+    transform: translateX(-40px);
+    opacity: 0;
+}
+
+.main-menu-bar .menu-1 > ul:hover ul {
+    height: 150px;
+    transform: translateX(0);
+    opacity: 1;
+}
+
+.main-menu-bar > .menu-1 > ul > li > a {
+    font-size: 1.15rem;
+    margin-bottom: 15px;
+}
+
+.main-menu-bar > .menu-1 > ul > li > ul > li > a {
+    margin-bottom: 10px
+}
+
+.main-menu-bar > .menu-1 ul > li:hover > a {
+    text-decoration: underline;
+}
+
+.main-menu-bar > .menu-1 > ul > li:nth-child(3) {
+    padding-right: 50px;
+}
+
+.main-menu-bar > .menu-1 > ul > li:nth-child(2) {
+    padding-right: 40px;
+}
+
+/*상단 아이콘 3개*/
+.icon > ul > li {
+    float: right;
+    padding: 10px;
+}
+
+.icon > ul::after {
+    content: "";
+    display: block;
+    clear: both;
+}
+
+.icon {
+    width: 130%;
+}
+
+/*메뉴에서 띄우기*/
+.shop-img-box {
+    position: relative;
+    top:2%;
+    transform: translateY(-2%;)
+}
+
+/*shop 배너작업*/
+.shop {
+    overflow: hidden;
+    position: relative;
+    
+}
+
+.left-side-bar {
+    left: -650px;
+    position: absolute;
+    width: 650px;
+    height: 800px;
+    background-color: white;
+    transition: all 1s;
+    z-index: 20;
+    cursor:pointer;
+    text-align: center;
+}
+
+.left-text {
+    position: absolute;
+    color: white;
+    text-align: center;
+    font-size: 3rem;
+    width: 800px;
+    background-color: rgba(0, 0, 0, 0.7);
+    top: 46%;
+    transform: rotate(90deg) translatey(-46%);
+    left: 38.6%;
+}
+
+.left-side-bar:hover {
+    left: 0;
+}
+
+.left-side-bar > ul > li {
+    float: left;
+    width: 33%;
+    height: 266.6666px;
+    border: 0.7px solid;
+}
+
+.left-side-bar > ul > li:nth-child(3n + 1) {
+    border-left: 1.4px solid;
+}
+
+.left-side-bar > ul::after {
+    content: "";
+    display: block;
+    clear: both;
+}
+/*오른쪽*/
+.right-side-bar {
+    right: -650px;
+    position: absolute;
+    width: 650px;
+    height: 800px;
+    ;
+    background-color: white;
+    transition: all 1s;
+    z-index: 20;
+}
+
+.right-text {
+    position: absolute;
+    color: white;
+    text-align: center;
+    font-size: 3rem;
+    width: 800px;
+    background-color: rgba(0, 0, 0, 0.7);
+    top: 46%;
+    transform: rotate(90deg) translatey(-46%);
+    right: 48%;
+}
+
+.right-side-bar:hover {
+    right: 0;
+}
+
+.right-side-bar > ul > li {
+    float: left;
+    width: 33%;
+    height: 266.6666px;
+    border: 0.7px solid;
+    cursor: pointer;
+}
+
+.right-side-bar > ul > li:nth-child(3n+3) {
+    border-right: 1.4px solid;
+}
+
+.right-side-bar > ul::after {
+    content: "";
+    display: block;
+    clear: both;
+}
+
+.main-banner-img-box > div > ul > li > a {
+    display: block;
+    font-size: 1.5rem;
+    font-weight: ;
+    top: 50%;
+    left: 50%;
+    transform: translatex(-50%) translatey(-50%);
+    position: absolute;
+}
+
+.main-banner-img-box > div > ul > li {
+    position: relative;
+    white-space: nowrap;
+}
+
+.main-banner-img-box > div > ul > li:hover > a {
+    text-decoration: underline;
+}
+
+.img-shop > a > img {
+    position: relative;
+    z-index: -10;
+    z-index: -10;
+}
+
+.img-shop > a::after {
+    content: "";
+    background-color: rgba(0, 0, 0, 0.5);
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    transition: all 1s;
+    opacity: 0;
+}
+
+.img-shop:hover > a::after {
+    opacity: 1;
+}
+
+.img-shop > a::before {
+    position:absolute;
+    content:"SHOP";
+    top:80%;
+    left:50%;
+    transform:translatex(-50%) translatey(-80%);
+    font-size:25px;
+    color:white;
+    border:6px solid white;
+    padding:15px 10px;
+    font-weight:900;
+    z-index:10;
+    opacity:0;
+    transition:opacity .8s;
+    display: block;
+    width:200px;
+    text-align: center;
+}
+
+.img-shop:hover > a::before {
+    opacity: 1;
+}
+
+/*여기부터임*/
+.img-collection > a > img {
+    position: relative;
+    z-index: -10;
+}
+
+.img-collection > a::after {
+    content: "";
+    background-color: rgba(0, 0, 0, 0.5);
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    transition: all 1s;
+    opacity: 0;
+}
+
+.img-collection:hover > a::after {
+    opacity: 1;
+}
+
+.img-collection > a::before {
+    position: absolute;
+    content: "COLLECTION";
+    top: 80%;
+    left: 50%;
+    transform: translatex(-50%) translatey(-80%);
+    font-size: 25px;
+    color: white;
+    border: 6px solid white;
+    padding: 15px 10px;
+    font-weight: 900;
+    z-index: 10;
+    opacity: 0;
+    transition: opacity .8s;
+    display: block;
+    width: 200px;
+    text-align: center;
+}
+
+.img-collection:hover > a::before {
+    opacity: 1;
+}
+
+/*여기부터임*/
+.img-story > a > img {
+    position: relative;
+    z-index: -10;
+}
+
+.img-story > a::after {
+    content: "";
+    background-color: rgba(0, 0, 0, 0.5);
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    transition: all 1s;
+    opacity: 0;
+}
+
+.img-story:hover > a::after {
+    opacity: 1;
+}
+
+.img-story > a::before {
+    position: absolute;
+    content: "STORY & NEWS";
+    top: 80%;
+    left: 50%;
+    transform: translatex(-50%) translatey(-80%);
+    font-size: 25px;
+    color: white;
+    border: 6px solid white;
+    padding: 15px 10px;
+    font-weight: 900;
+    z-index: 10;
+    opacity: 0;
+    transition: opacity .8s;
+    display: block;
+    width: 200px;
+    text-align: center;
+}
+
+.img-story:hover > a::before {
+    opacity: 1;

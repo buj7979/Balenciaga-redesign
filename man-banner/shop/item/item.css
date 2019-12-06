@@ -1,0 +1,575 @@
+a {
+    color:inherit;
+    text-decoration:none;
+}
+body, ul, li {
+    margin:0;
+    padding:0;
+    list-style:none;
+}
+body {
+    overflow-x: hidden;
+}
+html,body {
+    height:100%;
+}
+/*노말라이즈*/
+.con {
+    max-width:1360px;
+    margin:0 auto;
+}
+.top-bar {
+    height:100px;
+}
+.img-box {  
+    position:absolute;
+    top:50%;
+    transform:translatey(-50%);
+}
+
+
+.top-menu-img-box {
+    position: relative;
+    z-index: 100;
+}
+
+/*메인 로고*/
+.top-menu-img-box > img {
+    width: 20%;
+    display: block;
+    margin: 50px auto;
+}
+
+/*상단바작업*/
+.top-menu-row::after {
+    content: "";
+    display: block;
+    clear: both;
+}
+
+.top-menu-cell {
+    float: left;
+    box-sizing: border-box;
+}
+
+.main-menu-bar {
+    background-color: white;
+    position: absolute;
+    left: 50%;
+    width: 100%;
+    transform: translateX(-50%);
+    z-index: 10;
+}
+
+.main-menu-bar > .menu-1 > ul > li {
+    width: 13%;
+    position: relative;
+    left: 28%;
+    transform: translateX(-28%);
+}
+
+.main-menu-bar > .menu-1 ul > li a {
+    display: block;
+    text-align: center;
+}
+
+.main-menu-bar .menu-1 ul ul {
+    height: 0;
+    overflow-y: hidden;
+    transition: all .5s;
+    transform: translateX(-40px);
+    opacity: 0;
+}
+
+.main-menu-bar .menu-1 > ul:hover ul {
+    height: 150px;
+    transform: translateX(0);
+    opacity: 1;
+}
+
+.main-menu-bar > .menu-1 > ul > li > a {
+    font-size: 1.15rem;
+    margin-bottom: 15px;
+}
+
+.main-menu-bar > .menu-1 > ul > li > ul > li > a {
+    margin-bottom: 10px
+}
+
+.main-menu-bar > .menu-1 ul > li:hover > a {
+    text-decoration: underline;
+}
+
+.main-menu-bar > .menu-1 > ul > li:nth-child(3) {
+    padding-right: 50px;
+}
+
+.main-menu-bar > .menu-1 > ul > li:nth-child(2) {
+    padding-right: 40px;
+}
+
+/*상단 아이콘 3개*/
+.icon > ul > li {
+    float: right;
+    padding: 10px;
+}
+
+.icon > ul::after {
+    content: "";
+    display: block;
+    clear: both;
+}
+
+/*서브메뉴 (탑 FIXED바)*/
+
+.sub-menu-box {
+    height: 100px;
+    position: absolute;
+    top: 0;
+    left: 50%;
+    width: 100%;
+    transform: translateX(-50%);
+    z-index: 11;
+    text-align: center;
+    background-color: white;
+    opacity: 0;
+    transition: opacity .1s;
+    padding-bottom: 10px;
+}
+
+.sub-menu-box .menu-bar > ul > li {
+    position: relative;
+    float: left;
+    left: 25%;
+    transform: translatex(-25%);
+    box-sizing: border-box;
+    text-align: center;
+    padding: 0 50px;
+    margin-top:30px;
+}
+
+.sub-row::after {
+    content: "";
+    display: block;
+    clear: both;
+}
+
+.sub-menu-box > .menu-bar {
+    display: inline-block;
+}
+
+.sub-menu-box > .menu-bar ul > li > a {
+    display: block;
+    font-size: 1.2rem;
+    color: black;
+}
+
+.sub-menu-box > .menu-bar ul ul {
+    display: none;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    width: 100%;
+    padding: 10px 0;
+    background-color: white;
+}
+
+.sub-menu-box > .menu-bar > ul > li:hover > ul {
+    display: block;
+}
+
+.sub-menu-box > .menu-bar ul > li:hover > a {
+    color: red;
+    text-decoration: underline;
+}
+
+.sub-menu-box.fixed {
+    position: fixed;
+    top: 0;
+    opacity: 1;
+    z-index: 1000;
+}
+.input {
+    position: absolute;
+    right:2%;
+
+}
+.input > input {
+    width:300px;
+    height: 30px;
+}
+/*버튼*/
+
+.side-menu-btn {
+    display: inline-block;
+    width: 30px;
+    height: 30px;
+    position: absolute;
+    cursor: pointer;
+    left: 1%;
+    top: 30%;
+    transform: translatey(-30%);
+}
+
+.side-menu-btn > div {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 20%;
+    background-color: black;
+}
+
+.side-menu-btn > div:nth-child(2) {
+    top: 40%;
+    transition: visibility 0s 0.3s;
+}
+
+.side-menu-btn > div:nth-child(3) {
+    top: 80%;
+}
+
+.side-menu-btn.active > div:nth-child(2) {
+    visibility: hidden;
+    transition: visibility 0s;
+}
+
+.side-menu-btn > div:nth-child(1),
+.side-menu-btn > div:nth-child(3) {
+    transition: top 0.2s 0.2s, transform 0.2s 0s;
+}
+
+.side-menu-btn.active > div:nth-child(1),
+.side-menu-btn.active > div:nth-child(3) {
+    top: 40%;
+    transform: rotate(45deg);
+    transition: top 0.2s, transform 0.2s 0.2s;
+}
+
+.side-menu-btn.active > div:nth-child(3) {
+    transform: rotate(-45deg);
+}
+
+/*사이드바*/
+
+.side-menu-bar {
+    top: 11%;
+    width: 300px;
+    height: 100%;
+    position: fixed;
+    border: 1px solid;
+    z-index: 10000;
+    left: -302px;
+    transition: left .8s;
+    background-color: white;
+    z-index: 10;
+}
+
+.side-menu-bar > .menu-items ul ul {
+    display: none;
+}
+
+.side-menu-bar > .menu-items > ul > li:first-child {
+    padding-top: 100px;
+    padding-bottom: 30px;
+}
+
+.side-menu-bar.active {
+    left: 0;
+}
+
+.side-menu-bar > .menu-items ul > li > ul > li {
+    background-color: black;
+    color: white;
+}
+
+.side-menu-bar > .menu-items ul > li > ul > li > ul > li {
+    background-color: white;
+    color: black;
+}
+
+.side-menu-bar > .menu-items ul > li > a {
+    font-size: 1.5rem;
+}
+
+.side-menu-bar > .menu-items > ul > li > a {
+    font-size: 2.5rem;
+}
+
+.side-menu-bar .menu-items li.active > ul {
+    display: block;
+}
+
+.side-menu-bar .menu-items > ul ul > li > a {
+    padding-left: 20px;
+}
+
+.side-menu-bar .menu-items > ul ul ul > li > a {
+    padding-left: 40px;
+}
+
+.side-menu-bar .menu-items ul > li > a::after {
+    content: ">";
+    float: right;
+    margin-right: 5px;
+}
+
+.side-menu-bar .menu-items ul > li > a:not(:only-child)::after {
+    content: "+";
+}
+
+.side-menu-bar .menu-items ul > li.active > a:not(:only-child)::after {
+    content: "-";
+}
+
+.side-menu-bar .menu-items ul > li > ul > li:hover > a {
+    text-decoration: underline;
+}
+
+.side-menu-bar.left {
+    left: -302px;
+}
+.name,.price {
+    text-align: center;
+    font-size:1rem;
+    padding:5px;
+}
+.price {
+    font-size:1.2rem;
+    padding-bottom: 20px;
+}
+.sub-logo > img {
+    width: 20%;
+    display: block;
+    margin:0 auto;
+    margin-top:10px;
+}
+/*상세 페이지 */
+
+.item {
+    width:1600px;
+}
+.item > .item-img-box {
+    position:relative;
+    margin-top:250px;
+}
+.item > .item-img-box > ul > li {
+    float:left;
+    position:relative;
+    border:1px solid;
+    overflow:hidden;
+}
+.item >.item-img-box > ul > li:nth-child(2n+1) {
+    margin-left:200px;
+}
+
+.item > .item-img-box > ul > li > img {
+    position:relative;
+    width:450px;
+    transition:all 1s;
+}
+.item > .item-img-box > ul > li:hover > img {
+    transform:scale(1.25);
+}
+
+
+/*111*/
+
+.item-text {
+    padding-left:1130px;
+    width:600px;
+}
+.name {
+    font-size:3rem;
+    font-weight:bold;
+}
+.price {
+    font-size:3rem;
+    font-weight:500;
+    padding-top:20px;
+    padding-bottom:20px;
+    border-bottom:1px solid;
+}
+.info-h1,.info-h2{
+    font-size:1rem;
+    padding-top:10px; 
+}
+div.color {
+    font-size: 3rem;
+    font-weight:bold;
+    padding:20px 0;
+}
+button.color{
+    font-size:1.5rem;
+    font-weight: bold;
+    width:50px;
+    height: 50px;
+    border-radius: 100%;
+    margin-right: 10px;
+    border:2px solid black;
+    cursor: pointer;
+    margin-bottom: 20px;
+    user-select: none;    
+}
+button.black {
+    background-color: black;
+    color: white;
+}
+button.white {
+    background-color: white;
+}
+button.color.active {
+    text-decoration: underline;
+}
+.size-text {
+    font-size:3rem;
+    font-weight: 600;
+    letter-spacing: 4px;
+    padding-bottom:15px;
+}
+button.size {
+    width:60px;
+    height:40px;
+    font-size:1.2rem;
+    background-color: white;
+    border:1px solid black;
+    cursor:pointer;
+    text-align: center;
+    margin-bottom: 50px;
+    user-select: none;
+}
+button.size.active {
+    background-color: black;
+    color: white;
+}
+
+/*상품 구매 버튼*/
+.buy {
+    text-align: center;
+    font-size:3rem;
+    font-weight: 500;
+    border:2px solid;
+    width:400px;
+    padding:7px 3px;
+    cursor: pointer;
+    border-bottom:1.5px solid;
+}
+.cart > a{
+    border-top:1px solid;
+    border:2px solid;
+    font-size:2rem;
+    padding:6px 5.9px;
+    position: absolute;
+    width:190px;
+    text-align: center;
+    margin-top:-2px;
+} 
+.cart > a:last-child {
+    right:19.1%;
+    border-left:1px solid;
+}
+.cart > a:first-child {
+    border-right:1px solid;
+}
+.cart {
+    width:400px;
+}
+
+/*반품,상품정보*/
+
+.tmi {
+    width:500px;
+    margin-top:100px;
+}
+
+.tmi > section {
+    height:40px;
+    transition:height 0.3s;
+    cursor:pointer;
+    position:relative;
+    overflow:hidden;
+}
+.tmi > section.active {
+    height:260px;
+}
+.tmi > section:last-child.active {
+    height:150px;
+}
+.tmi > section::before {
+    float:right;
+    margin-right:30px;
+    content:"+";
+    font-size:1rem;
+    font-weight:bold;
+}
+.tmi > section.active::before {
+    content:"-";
+}
+.tmi > section.active > div {
+    opacity:1;
+}
+.tmi > section > div {
+    position:absolute;
+    bottom:0;
+    opacity:0;
+}
+.tmi > section {
+    font-weight: 500;
+    font-size:1.2rem;
+    border-bottom:1px solid;
+}
+.tmi > section > div {
+    font-size:.9rem;
+}
+
+/*전에 본 상품*/
+.last-item {
+    position: absolute;
+    bottom:0;
+    top:220%;
+    cursor: pointer;
+}
+.last-item > ul > li{
+    position: relative;
+    bottom:0;
+    float :left;
+    width:20%;
+    box-sizing:border-box;
+    border:1px solid;
+    border-top:.5px solid;
+}
+.last-item > ul::after {
+    content:'';
+    display: block;
+    clear:both;
+}
+.last-item > ul > li > img {
+    width: 120%;
+}
+.last-text {
+    position:absolute;
+    font-size:2rem;
+    top:215.3%;
+    border-bottom: .5px solid;
+    border:1px solid;
+    width:100%;
+    text-align: center;
+}
+.under-bar {
+    position: absolute;
+    top:280%;
+    background-color: #100e0e;
+    width:100%;
+}
+.under-bar > img {
+    position: relative;
+    width:70%;
+    left:50%;
+    transform: translateX(-50%);
+}
+.sub-logo > img {
+    width: 20%;
+    display: block;
+    margin:0 auto;
+    margin-top:10px;
+}

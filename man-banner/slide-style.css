@@ -1,0 +1,128 @@
+.home-slider {
+    top:100%;
+    height:700px;
+    position:relative;
+    user-select:none;
+}
+.home-slider .side-bars > div {
+    position:absolute;
+    top:0;
+    left:0;
+    width:100px;
+    height:100%;
+    cursor:pointer;
+}
+.home-slider .side-bars > div:last-child {
+    left:auto;
+    right:0;
+}
+.home-slider .side-bars > div > span {
+    position:absolute;
+    top:50%;
+    transform:translateY(-50%);
+    left:inherit;
+    right:inherit;
+    font-size:5rem;
+    transition: transform 0.2s;
+    margin:0 10px;
+}
+.home-slider .side-bars > div:active > span {
+    transform:translateY(-40%);
+}
+.home-slider > .slides > div {
+    position:absolute;
+    top:0%;
+    left:0;
+    width:1366px;
+    height:700px;
+    opacity:0;
+    visibility: hidden;
+    transition:opacity 0.5s, visibility 0.5s;
+    cursor: pointer;
+}
+.home-slider > .slides > div.active {
+    opacity:1;
+    visibility: visible;
+}
+.img-box > img {
+    width:100%;
+    display:block;
+}
+
+.row::after {
+    content:"";
+    display:block;
+    clear:both;
+}
+
+.cell {
+    float:left;
+    box-sizing:border-box;
+}
+
+.cell-right {
+    float:right;
+    box-sizing:border-box;
+}
+
+.block {
+    display:block;
+}
+
+.inline-block {
+    display:inline-block;
+}
+
+.text-align-center {
+    text-align:center;
+}
+
+.line-height-0-ch-only {
+    line-height:0;
+}
+
+.line-height-0-ch-only > * {
+    line-height:normal;
+}
+
+.relative {
+    position:relative;
+}
+
+.absolute-left {
+    position:absolute;
+    left:0;
+}
+
+.absolute-right {
+    position:absolute;
+    right:0;
+}
+
+.absolute-middle {
+    position:absolute;
+    top:50%;
+    transform:translateY(-50%);
+}
+.home-slider .page-btns {
+    position:absolute;
+    bottom:100px;
+    left:0;
+    right:0;
+    text-align:center;
+    top:90%;
+}
+
+.home-slider .page-btns > li {
+    width:20px;
+    height:20px;
+    background-color:rgba(0,0,0,0.5);
+    display:inline-block;
+    border-radius:3px;
+    cursor:pointer;
+    margin:0 1px;
+}
+
+.home-slider .page-btns > li.active {
+    background-color:black;
+}
